@@ -147,7 +147,7 @@ Place the contents into `.cursorrules` or create `.cursor/rules/arise.mdc` in yo
 | **19** | Scope Lock Specification | In-scope, out-of-scope, constraints, and success criteria. |
 | **20** | Execution After ARISE | Discipline within locked boundaries. |
 | **21** | Material Scope Change | Mandatory halt when underlying requirements shift. |
-| **22** | Empirical Verification | Compilers, linters, tests, and runtime checks. |
+| **22** | Empirical Verification & Dual-Track Evaluation | Compilers, tests, runtime checks, and mandatory 50:50 Seen vs Unseen AI/ML benchmark split. |
 | **23** | Final Reporting | Honest accounting of results delivered in the user's language. |
 | **24** | Adaptive Output | Right-sized verbosity for every task type. |
 | **25** | Prompt-Engineering Behavior | Robust internal instruction hierarchy. |

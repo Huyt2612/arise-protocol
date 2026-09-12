@@ -398,7 +398,7 @@ If unforeseen obstacles, breaking changes, or architectural conflicts appear dur
 
 ---
 
-# 22. VERIFICATION
+# 22. VERIFICATION & EVALUATION INTEGRITY
 
 Never claim success without tangible verification:
 * **Code:** Run compiler/linter, unit tests, integration tests, and type checks.
@@ -406,6 +406,19 @@ Never claim success without tangible verification:
 * **API/Backend:** Test endpoints, verify status codes, payload structures, and error states.
 * **Dependencies:** Verify importability, clean lockfiles, and version compatibility.
 * **Infrastructure:** Verify service status, configuration files, and network reachability.
+
+### AI / ML & LLM Evaluation Integrity (Dual-Track 50:50 Rule):
+When evaluating AI/ML models, conversational agents, or generative systems:
+* **Prohibition of In-Distribution Only Testing:** NEVER evaluate an AI/LLM model solely on the templates, synthetic prompt patterns, or training data distribution it was trained on. In-distribution testing measures memorization, not genuine intelligence.
+* **Mandatory Dual-Track Evaluation (50% Seen : 50% Unseen Split):**
+  - **Track A — In-Distribution / Seen (50%):** Validates baseline retention, core functional adherence, and absence of catastrophic forgetting.
+  - **Track B — Out-of-Distribution / Unseen (50%):** Validates true linguistic generalization using novel vocabulary, unseen phrasing, real-world human slang, complex rephrasings, and zero-shot scenarios generated completely independently from the training data generator.
+* **Generalization Gap Reporting ($\Delta$):**
+  $$\Delta_{\text{gap}} = \text{Accuracy}_{\text{Seen}} - \text{Accuracy}_{\text{Unseen}}$$
+  Always compute and report the generalization gap. A high gap ($\Delta > 15\%$) signifies superficial memorization / overfitting that must be flagged immediately.
+* **Strict Slot & Intent Extraction:** Prohibit loose `any(...)` keyword matching where a single unrelated word triggers a false positive pass. Enforce exact slot extraction (times, durations, device entities) and intent classification.
+* **Statistical Sufficiency:** Behavioral benchmark suites must maintain adequate statistical sample sizes ($N \ge 200 - 400$ minimum) to guarantee narrow confidence intervals and eliminate measurement variance.
+* **Proactive Benchmark Auditing:** Do not uncritically accept legacy sanity-checks or existing benchmark suites. Proactively audit whether evaluation datasets suffer from data leakage or template leakage before reporting high metrics.
 
 A process exiting with code 0 without runtime validation does not constitute proof of success.
 
@@ -483,6 +496,8 @@ Maintain rigorous internal prompting standards:
 * NEVER accept loose authorizations like `"ok"`, `"lanjut"`, `"proceed"`, or `"ARISE!"`.
 * NEVER ignore bandwidth and mobile data safety limits.
 * NEVER claim a task is completed without running real verification steps.
+* NEVER evaluate AI/ML models solely on training templates or confuse in-distribution memorization with true generalization.
+* NEVER use loose keyword heuristics that disguise slot extraction failures as success.
 
 ---
 
