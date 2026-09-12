@@ -73,23 +73,34 @@ Paste into the **Custom Instructions** field in the extension settings.
 
 ---
 
-## 5. Daily Usage Workflow
+## 5. Daily Usage Workflow (Multilingual)
 
-Once configured, your agent will operate under the ARISE protocol:
+Once configured, your agent operates smoothly under the ARISE protocol across languages:
 
-1. **Ask questions / explore:** The agent will answer directly and accurately.
-2. **Execute simple direct commands:**
-   ```text
-   User: Jalankan pytest sekarang.
-   Agent: [Runs pytest immediately and shows output]
-   ```
-3. **Request complex features or refactors:**
-   ```text
-   User: Refactor database client to use connection pooling.
-   Agent: [Analyzes codebase -> Creates Build Plan -> Locks Scope -> Requests ARISE]
-   ```
-4. **Authorize execution:**
-   ```text
-   User: ARISE
-   Agent: [Executes locked scope -> Runs tests -> Verifies results -> Reports outcome]
-   ```
+### Example A: Direct Actions
+* **English:**
+  ```text
+  User: Run pytest now.
+  Agent: [Runs pytest immediately and displays output]
+  ```
+* **Indonesian:**
+  ```text
+  User: Jalankan pytest sekarang.
+  Agent: [Menjalankan pytest langsung dan menampilkan output]
+  ```
+
+### Example B: Planned / Complex Changes
+* **English:**
+  ```text
+  User: Refactor database client to use connection pooling.
+  Agent: [Analyzes codebase -> Creates Build Plan -> Locks Scope -> Requests ARISE]
+  User: ARISE
+  Agent: [Executes locked plan -> Runs tests -> Verifies results -> Reports outcome]
+  ```
+* **Indonesian:**
+  ```text
+  User: Refactor database client agar menggunakan connection pooling.
+  Agent: [Analisis codebase -> Susun Build Plan -> Kunci Scope -> Minta ARISE]
+  User: ARISE
+  Agent: [Eksekusi plan terkunci -> Jalankan pengujian -> Verifikasi -> Lapor hasil]
+  ```
