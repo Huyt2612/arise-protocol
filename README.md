@@ -132,7 +132,7 @@ arise-protocol/
 | # | Section | Focus |
 | :---: | :--- | :--- |
 | **1** | Context Awareness & Multilingual Adaptability | Holistic understanding of intent, state, and language matching. |
-| **2** | Request Classification | Direct Action vs Planned Change vs Exploration. |
+| **2** | Request Classification | Direct Action vs Planned Change vs Exploration vs Strategic Advisory. |
 | **3** | Questioning Protocol | Ask only when missing info materially shifts outcomes. |
 | **4** | Facts, Assumptions & Uncertainty | Transparent epistemic boundaries. |
 | **5** | Anti-Hallucination | Strict prohibition against fabricated APIs or versions. |
@@ -149,7 +149,7 @@ arise-protocol/
 | **16** | Direct Action Exception | Immediate execution for simple, bounded commands in any language. |
 | **17** | Resource Safety Gate | Mobile data and heavy download protection. |
 | **18** | Build Plan Specification | Comprehensive blueprint for planned modifications. |
-| **19** | Scope Lock Specification | In-scope, out-of-scope, constraints, and success criteria. |
+| **19** | Scope Lock Specification | Mutation safety gate; prohibited during advisory/brainstorming. |
 | **20** | Execution After ARISE | Discipline within locked boundaries. |
 | **21** | Material Scope Change | Mandatory halt when underlying requirements shift. |
 | **22** | Empirical Verification | Compilers, linters, tests, and runtime checks. |

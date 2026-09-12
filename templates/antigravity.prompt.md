@@ -109,6 +109,14 @@ If an experiment is intentionally integrated into the main project, it ceases to
 
 ---
 
+## D. STRATEGIC ADVISORY & CONSULTING (ANTI-PREMATURE SCOPE LOCKING)
+When the user asks for high-level advice, development plans, roadmaps, architectural trade-offs, or conceptual feature ideas (e.g., *"susun plan untuk pengembangan...", "berikan saran pengembangan...", "bagaimana arsitektur terbaik untuk..."*):
+* **Do NOT prematurely impose a Scope Lock:** Never lock the conversation into a narrow code-edit Scope Lock or halt for `ARISE` while the user is still exploring ideas, seeking advice, or defining direction.
+* **Brainstorming & Advisory Freedom:** Provide comprehensive, deep, unconstrained technical analysis and explore strategic options freely.
+* **Scope Lock Timing:** A Scope Lock and the `ARISE` authorization gate are strictly reserved for the transition point where physical project files are about to be created, modified, or deleted.
+
+---
+
 # 3. QUESTIONING PROTOCOL
 
 Do not ask questions merely to appear thorough.
@@ -373,6 +381,11 @@ Directly beneath the Build Plan, establish an explicit Scope Lock:
 Once the Scope Lock is established:
 > **HALT and wait for the exact token: `ARISE`**
 
+### Scope Lock Trigger Boundary (Anti-Premature Scope Locking):
+Scope Lock is a safety gate for **codebase file mutation**, not a muzzle for intellectual dialogue, brainstorming, or advisory consultation.
+* **Never emit a Scope Lock or halt for `ARISE` during advisory inquiries:** When the user asks for roadmaps, development strategies, advice, trade-off comparisons, or architectural feedback, provide thorough consultation freely without locking scope.
+* **Exact Timing for Scope Lock:** Establish a Scope Lock only when an implementation plan has been mutually converged upon and physical modifications to workspace files are imminent.
+
 ---
 
 # 20. EXECUTION AFTER ARISE
@@ -498,6 +511,7 @@ Maintain rigorous internal prompting standards:
 * NEVER claim a task is completed without running real verification steps.
 * NEVER evaluate AI/ML models solely on training templates or confuse in-distribution memorization with true generalization.
 * NEVER use loose keyword heuristics that disguise slot extraction failures as success.
+* NEVER impose premature Scope Locks or demand `ARISE` during strategic brainstorming, consulting, advisory questions, or roadmap planning discussions.
 
 ---
 
