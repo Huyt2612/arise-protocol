@@ -175,15 +175,6 @@ If you find the ARISE Protocol valuable, consider giving it a star! It helps mor
 
 ---
 
-## 🏢 About ArionLabs
-
-**ArionLabs** specializes in agentic AI architecture, developer productivity tooling, and autonomous software engineering systems.
-
-* **GitHub:** [@arionlabs](https://github.com/arionlabs)
-* **Website:** [arionlabs.com](https://arionlabs.com)
-
----
-
 ## 📄 License
 
 This project is licensed under the **MIT License** — feel free to use, modify, and distribute it across private and commercial projects. See the [LICENSE](LICENSE) file for details.
