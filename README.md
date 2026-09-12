@@ -10,23 +10,53 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/Huyt2612/arise-protocol/stargazers"><img src="https://img.shields.io/github/stars/Huyt2612/arise-protocol?style=for-the-badge&color=gold" alt="GitHub Stars"/></a>
   <img src="https://img.shields.io/badge/Maintained%20by-ArionLabs-0052CC?style=for-the-badge&logo=shield" alt="ArionLabs"/>
   <img src="https://img.shields.io/badge/Protocol-v2.0%20Multilingual-FF6F00?style=for-the-badge" alt="ARISE v2"/>
   <img src="https://img.shields.io/badge/License-MIT-2E7D32?style=for-the-badge" alt="MIT License"/>
   <img src="https://img.shields.io/badge/Compatible-Antigravity%20%7C%20Claude%20%7C%20Cursor%20%7C%20Copilot-7B1FA2?style=for-the-badge" alt="Compatibility"/>
 </p>
 
+<p align="center">
+  <a href="#-quick-setup-1-click">⚡ Quick Setup</a> •
+  <a href="#-the-solution-without-vs-with-arise">⚖️ Why ARISE</a> •
+  <a href="#-the-core-lifecycle">🔄 Core Lifecycle</a> •
+  <a href="#-pre-packaged-templates">📦 Templates</a> •
+  <a href="#-the-29-directives">📋 29 Directives</a> •
+  <a href="CONTRIBUTING.md">🤝 Contribute</a>
+</p>
+
 ---
 
-## 🌟 Overview
+## ⚡ Quick Setup (1-Click)
 
-Modern AI coding agents are fast—sometimes **too fast**. Without strict governance, AI agents frequently suffer from:
-* **Scope Creep & Silent Drift:** Unilaterally modifying unrelated files or introducing unrequested abstractions.
-* **Premature Execution:** Writing speculative code before understanding project state, dependencies, or root causes.
-* **Hallucinated Capabilities:** Inventing fictitious APIs, configuration flags, or benchmark numbers.
-* **Simulated Verification:** Assuming a task succeeded simply because an interpreter exited with code 0.
+Download and apply the protocol to your project with a single command:
 
-**ARISE Protocol** was engineered by **ArionLabs** to solve these fundamental agentic flaws. It enforces an airtight engineering lifecycle that guarantees high-leverage autonomy while strictly protecting codebase integrity.
+### For Cursor Users (`.cursorrules`)
+```bash
+curl -sSL https://raw.githubusercontent.com/Huyt2612/arise-protocol/main/templates/.cursorrules -o .cursorrules
+```
+
+### For Claude Code Users (`CLAUDE.md`)
+```bash
+curl -sSL https://raw.githubusercontent.com/Huyt2612/arise-protocol/main/templates/CLAUDE.md -o CLAUDE.md
+```
+
+### For Antigravity / Custom System Prompts
+Copy the full text directly from [`ARISE_PROTOCOL.md`](ARISE_PROTOCOL.md) into your agent's system prompt instructions.
+
+---
+
+## ⚖️ The Solution: Without vs. With ARISE
+
+| Challenge | ❌ Autonomous Agent WITHOUT ARISE | ✅ Autonomous Agent WITH ARISE Protocol |
+| :--- | :--- | :--- |
+| **Scope Control** | Unilaterally refactors unrelated files, installs unrequested frameworks, and introduces breaking churn. | **Strict Scope Lock:** Halts immediately. Only modifies files inside the authorized boundary. |
+| **Execution Safety** | Executes speculative code immediately based on assumptions or half-read user sentences. | **`ARISE` Authorization Gate:** Planned changes require a Build Plan and the exact uppercase token `ARISE`. |
+| **Exploration / R&D** | Edits production files to test an experiment, leaving half-broken prototype code behind. | **Workspace Boundary:** Experiments are strictly isolated in sandboxes/scratch folders; main project remains untouched. |
+| **API Accuracy** | Hallucinates non-existent function signatures, flags, or fake dependencies to sound confident. | **Anti-Hallucination & Epistemic Boundaries:** Strict distinction between Facts, Assumptions, and Inferences. |
+| **Simulated Success** | Declares *"Task Complete!"* simply because the terminal command exited with code 0. | **Tangible Verification:** Demands actual tests, compiler output, runtime checks, or visual validations before claiming success. |
+| **Bandwidth Limits** | Silently triggers gigabyte-scale model/dataset downloads on metered connections. | **Resource Safety Gate:** Detects heavy downloads on mobile data, discloses size, and asks confirmation. |
 
 ---
 
@@ -61,29 +91,16 @@ flowchart LR
 
 ---
 
-## 🛡️ Key Pillars of ARISE
+## 📦 Pre-Packaged Templates
 
-### 1. Tri-State Request Classification
-| Category | Definition | Execution Gate |
+Pre-configured presets ready to drop into your workspace:
+
+| Tool | Config File | Instant Link |
 | :--- | :--- | :--- |
-| **Direct Action** | Simple, explicit tasks (e.g., *"Run git status now"* / *"Jalankan git status sekarang"*). | Instant execution without ARISE. |
-| **Planned / Complex Change** | Architectural shifts, refactors, schema migrations, new features. | **Build Plan + Scope Lock + Exact `ARISE` required.** |
-| **Exploration / Sandbox** | Proof of concept, benchmarking, learning, research. | Autonomous inside isolated scratch folders; main project remains untouched. |
-
-### 2. Strict Authorization Gate (`ARISE`)
-No ambiguous confirmations. To authorize a planned modification, the user must supply the exact uppercase token:
-* ✅ `ARISE`
-* ❌ `arise`, `ARISE!`, `ARISE please`, `ok proceed`, `lanjut` (rejected)
-
-### 3. Separation of Workspace & Experiments
-Experiments never pollute the main repository. Pre-ARISE permitted operations include reading, diagnosing, and testing in sandbox environments, but substantive changes to production files are blocked until authorized.
-
-### 4. Anti-Hallucination & YAGNI
-* Distinguishes **Facts** (empirically verified) from **Assumptions** (temporary working premises) and **Inferences**.
-* Implements **YAGNI** (*You Aren't Gonna Need It*): Need $ightarrow$ Evidence $ightarrow$ Simplest Adequate Solution.
-
-### 5. Mobile Data & Bandwidth Safety
-Prevents silent gigabyte-scale downloads. If significant downloads (> 50 MB) are triggered while on mobile or metered connections, the agent halts, estimates payload size, and requests explicit confirmation.
+| **Cursor IDE** | `.cursorrules` | [`templates/.cursorrules`](templates/.cursorrules) |
+| **Claude Code** | `CLAUDE.md` | [`templates/CLAUDE.md`](templates/CLAUDE.md) |
+| **Google Antigravity** | `system_prompt.md` | [`templates/antigravity.prompt.md`](templates/antigravity.prompt.md) |
+| **Universal Master** | `ARISE_PROTOCOL.md` | [`ARISE_PROTOCOL.md`](ARISE_PROTOCOL.md) |
 
 ---
 
@@ -95,34 +112,22 @@ arise-protocol/
 │   └── logo-arionlabs.jpg       # Official ArionLabs emblem
 ├── docs/
 │   └── QUICKSTART.md            # Step-by-step setup for Antigravity, Claude, Cursor, Copilot
+├── templates/
+│   ├── .cursorrules             # 1-Click configuration for Cursor
+│   ├── CLAUDE.md                # 1-Click configuration for Claude Code
+│   └── antigravity.prompt.md    # 1-Click configuration for Antigravity
+├── .github/
+│   ├── ISSUE_TEMPLATE/          # Bug & feature request templates
+│   └── pull_request_template.md # Standardized PR review checklist
 ├── ARISE_PROTOCOL.md            # The complete 29-section production system prompt
+├── CONTRIBUTING.md              # Community contribution guide
 ├── README.md                    # Project documentation & reference
 └── LICENSE                      # MIT Open Source License
 ```
 
 ---
 
-## 🚀 Quick Start
-
-### Option A: Use with Google Antigravity
-1. Open your Antigravity Custom Instructions or active project instructions.
-2. Copy the full content of [`ARISE_PROTOCOL.md`](ARISE_PROTOCOL.md).
-3. Paste it as your System Prompt.
-
-### Option B: Use with Claude Code
-Add the prompt to your project's root `CLAUDE.md`:
-```bash
-cat ARISE_PROTOCOL.md >> CLAUDE.md
-```
-
-### Option C: Use with Cursor
-Place the contents into `.cursorrules` or create `.cursor/rules/arise.mdc` in your workspace root.
-
-👉 *See [docs/QUICKSTART.md](docs/QUICKSTART.md) for detailed platform-specific guides.*
-
----
-
-## 📋 The 29 Protocol Directives
+## 📋 The 29 Directives
 
 | # | Section | Focus |
 | :---: | :--- | :--- |
@@ -147,7 +152,7 @@ Place the contents into `.cursorrules` or create `.cursor/rules/arise.mdc` in yo
 | **19** | Scope Lock Specification | In-scope, out-of-scope, constraints, and success criteria. |
 | **20** | Execution After ARISE | Discipline within locked boundaries. |
 | **21** | Material Scope Change | Mandatory halt when underlying requirements shift. |
-| **22** | Empirical Verification & Dual-Track Evaluation | Compilers, tests, runtime checks, and mandatory 50:50 Seen vs Unseen AI/ML benchmark split. |
+| **22** | Empirical Verification | Compilers, linters, tests, and runtime checks. |
 | **23** | Final Reporting | Honest accounting of results delivered in the user's language. |
 | **24** | Adaptive Output | Right-sized verbosity for every task type. |
 | **25** | Prompt-Engineering Behavior | Robust internal instruction hierarchy. |
@@ -155,6 +160,18 @@ Place the contents into `.cursorrules` or create `.cursor/rules/arise.mdc` in yo
 | **27** | Negative Behaviors to Avoid | Anti-patterns explicitly banned. |
 | **28** | Decision Priority | Unambiguous conflict resolution hierarchy. |
 | **29** | Operating Philosophy | The core mindset of responsible agentic engineering. |
+
+---
+
+## 🌟 Star History
+
+If you find the ARISE Protocol valuable, consider giving it a star! It helps more engineers discover disciplined agentic workflows.
+
+<p align="center">
+  <a href="https://star-history.com/#Huyt2612/arise-protocol&Date">
+    <img src="https://api.star-history.com/svg?repos=Huyt2612/arise-protocol&type=Date" alt="Star History Chart" style="max-width: 100%; height: auto;"/>
+  </a>
+</p>
 
 ---
 
