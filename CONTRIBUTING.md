@@ -8,7 +8,7 @@ Thank you for your interest in enhancing the **ARISE Protocol**! This project is
 
 ### 1. Propose Protocol Refinements
 If you discover an edge case where an AI coding agent misinterprets instructions, creates unintended hallucinations, or bypasses a scope lock:
-1. Check existing [Issues](https://github.com/Huyt2612/arise-protocol/issues) to see if it has been reported.
+1. Check existing [Issues](https://github.com/ju1-dev/arise-protocol/issues) to see if it has been reported.
 2. Open an issue with a concrete reproduction transcript (Few-Shot format).
 3. Propose a targeted refinement to the relevant directive.
 

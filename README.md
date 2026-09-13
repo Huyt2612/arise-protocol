@@ -10,9 +10,9 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Huyt2612/arise-protocol/stargazers"><img src="https://img.shields.io/github/stars/Huyt2612/arise-protocol?style=for-the-badge&color=gold" alt="GitHub Stars"/></a>
+  <a href="https://github.com/ju1-dev/arise-protocol/stargazers"><img src="https://img.shields.io/github/stars/ju1-dev/arise-protocol?style=for-the-badge&color=gold" alt="GitHub Stars"/></a>
   <img src="https://img.shields.io/badge/Maintained%20by-ArionLabs-0052CC?style=for-the-badge&logo=shield" alt="ArionLabs"/>
-  <img src="https://img.shields.io/badge/Protocol-v2.0%20Multilingual-FF6F00?style=for-the-badge" alt="ARISE v2"/>
+  <img src="https://img.shields.io/badge/Protocol-v2.1%20Multilingual-FF6F00?style=for-the-badge" alt="ARISE v2.1"/>
   <img src="https://img.shields.io/badge/License-MIT-2E7D32?style=for-the-badge" alt="MIT License"/>
   <img src="https://img.shields.io/badge/Compatible-Antigravity%20%7C%20Claude%20%7C%20Cursor%20%7C%20Copilot-7B1FA2?style=for-the-badge" alt="Compatibility"/>
 </p>
@@ -22,7 +22,7 @@
   <a href="#-the-solution-without-vs-with-arise">⚖️ Why ARISE</a> •
   <a href="#-the-core-lifecycle">🔄 Core Lifecycle</a> •
   <a href="#-pre-packaged-templates">📦 Templates</a> •
-  <a href="#-the-29-directives">📋 29 Directives</a> •
+  <a href="#-the-30-directives">📋 30 Directives</a> •
   <a href="CONTRIBUTING.md">🤝 Contribute</a>
 </p>
 
@@ -34,12 +34,12 @@ Download and apply the protocol to your project with a single command:
 
 ### For Cursor Users (`.cursorrules`)
 ```bash
-curl -sSL https://raw.githubusercontent.com/Huyt2612/arise-protocol/main/templates/.cursorrules -o .cursorrules
+curl -sSL https://raw.githubusercontent.com/ju1-dev/arise-protocol/main/templates/.cursorrules -o .cursorrules
 ```
 
 ### For Claude Code Users (`CLAUDE.md`)
 ```bash
-curl -sSL https://raw.githubusercontent.com/Huyt2612/arise-protocol/main/templates/CLAUDE.md -o CLAUDE.md
+curl -sSL https://raw.githubusercontent.com/ju1-dev/arise-protocol/main/templates/CLAUDE.md -o CLAUDE.md
 ```
 
 ### For Antigravity / Custom System Prompts
@@ -51,6 +51,8 @@ Copy the full text directly from [`ARISE_PROTOCOL.md`](ARISE_PROTOCOL.md) into y
 
 | Challenge | ❌ Autonomous Agent WITHOUT ARISE | ✅ Autonomous Agent WITH ARISE Protocol |
 | :--- | :--- | :--- |
+| **Collaboration & Tone** | Acts either like a sycophantic yes-man or a cold, bureaucratic compliance robot spitting canned disclaimers. | **Authentic Senior Partner:** Warm, conversational, intellectually curious pair-programmer who thinks *with* you while strictly enforcing engineering discipline. |
+| **Critical Skepticism** | Blindly implements naive or hazardous requests without questioning failure modes or second-order risks. | **Pre-Mortem Analysis (Devil's Advocate):** Proactively stress-tests architectures, reveals trade-offs, and catches failure modes before production. |
 | **Scope Control** | Unilaterally refactors unrelated files, installs unrequested frameworks, and introduces breaking churn. | **Strict Scope Lock:** Halts immediately. Only modifies files inside the authorized boundary. |
 | **Execution Safety** | Executes speculative code immediately based on assumptions or half-read user sentences. | **`ARISE` Authorization Gate:** Planned changes require a Build Plan and the exact uppercase token `ARISE`. |
 | **Exploration / R&D** | Edits production files to test an experiment, leaving half-broken prototype code behind. | **Workspace Boundary:** Experiments are strictly isolated in sandboxes/scratch folders; main project remains untouched. |
@@ -119,7 +121,7 @@ arise-protocol/
 ├── .github/
 │   ├── ISSUE_TEMPLATE/          # Bug & feature request templates
 │   └── pull_request_template.md # Standardized PR review checklist
-├── ARISE_PROTOCOL.md            # The complete 29-section production system prompt
+├── ARISE_PROTOCOL.md            # The complete 30-section production system prompt
 ├── CONTRIBUTING.md              # Community contribution guide
 ├── README.md                    # Project documentation & reference
 └── LICENSE                      # MIT Open Source License
@@ -127,11 +129,11 @@ arise-protocol/
 
 ---
 
-## 📋 The 29 Directives
+## 📋 The 30 Directives
 
 | # | Section | Focus |
 | :---: | :--- | :--- |
-| **1** | Context Awareness & Multilingual Adaptability | Holistic understanding of intent, state, and language matching. |
+| **1** | Context Awareness, Multilingual & Partner Dynamics | Holistic understanding of intent, state, language matching, and authentic peer collaboration. |
 | **2** | Request Classification | Direct Action vs Planned Change vs Exploration vs Strategic Advisory. |
 | **3** | Questioning Protocol | Ask only when missing info materially shifts outcomes. |
 | **4** | Facts, Assumptions & Uncertainty | Transparent epistemic boundaries. |
@@ -152,14 +154,15 @@ arise-protocol/
 | **19** | Scope Lock Specification | Mutation safety gate; prohibited during advisory/brainstorming. |
 | **20** | Execution After ARISE | Discipline within locked boundaries. |
 | **21** | Material Scope Change | Mandatory halt when underlying requirements shift. |
-| **22** | Empirical Verification | Compilers, linters, tests, and runtime checks. |
+| **22** | Empirical Verification | Compilers, linters, tests, and dual-track 50:50 Seen/Unseen AI benchmark splits. |
 | **23** | Final Reporting | Honest accounting of results delivered in the user's language. |
-| **24** | Adaptive Output | Right-sized verbosity for every task type. |
+| **24** | Adaptive Output & Communication Style | Scaled verbosity: interactive peer discussion, rapid diagnostics, and crisp execution reports. |
 | **25** | Prompt-Engineering Behavior | Robust internal instruction hierarchy. |
 | **26** | Few-Shot Demonstrations | Real-world behavioural benchmarks across languages. |
-| **27** | Negative Behaviors to Avoid | Anti-patterns explicitly banned. |
-| **28** | Decision Priority | Unambiguous conflict resolution hierarchy. |
-| **29** | Operating Philosophy | The core mindset of responsible agentic engineering. |
+| **27** | Negative Behaviors to Avoid | Anti-patterns explicitly banned (robotic formality, blind rubber-stamping, unverified shortcuts). |
+| **28** | Internal Skepticism & Pre-Mortem (Devil's Advocate) | Active failure-mode stress testing, second-order effects disclosure, and pragmatic exemptions. |
+| **29** | Decision Priority | Unambiguous conflict resolution hierarchy. |
+| **30** | Operating Philosophy | The core mindset: partner with empathy and curiosity; execute with unyielding rigor. |
 
 ---
 
@@ -168,8 +171,8 @@ arise-protocol/
 If you find the ARISE Protocol valuable, consider giving it a star! It helps more engineers discover disciplined agentic workflows.
 
 <p align="center">
-  <a href="https://star-history.com/#Huyt2612/arise-protocol&Date">
-    <img src="https://api.star-history.com/svg?repos=Huyt2612/arise-protocol&type=Date" alt="Star History Chart" style="max-width: 100%; height: auto;"/>
+  <a href="https://star-history.com/#ju1-dev/arise-protocol&Date">
+    <img src="https://api.star-history.com/svg?repos=ju1-dev/arise-protocol&type=Date" alt="Star History Chart" style="max-width: 100%; height: auto;"/>
   </a>
 </p>
 
